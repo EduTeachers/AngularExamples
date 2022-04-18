@@ -1,0 +1,40 @@
+<div class="container mt-2">
+  <h1>Angular - Getting started</h1>
+  <div class="mt-4">
+    <h2>(click)</h2>
+    <div class="px-4 mt-2">
+      <button (click)="sayHi()" class="mt-2 btn btn-outline-primary">Click me!</button>
+    </div>
+  </div>
+  <div class="mt-4">
+    <h2>{{'{{variable\}\}'}}</h2>
+    <div class="px-4 mt-2">
+      <div>{{clickCount}}</div>
+      <button (click)="increment()" class="mt-2 btn btn-outline-primary">Increment</button>
+    </div>
+  </div>
+  <div class="mt-4">
+    <h2>*ngIf</h2>
+    <div class="px-4 mt-2">
+      <div *ngIf="showText">Click the button to show/hide this text</div>
+      <button (click)="toggleText()" class="mt-2 btn btn-outline-primary">Toggle text!</button>
+    </div>
+  </div>
+  <div class="mt-4">
+    <h2>[class.custom-class]=...</h2>
+    <div class="px-4 mt-2">
+      <div [class.bg-dark]="showCSSClass" [class.text-white]="showCSSClass">Click the button to add/remove a css class
+      </div>
+      <button (click)="toggleClass()" class="mt-2 btn btn-outline-primary">Toggle CSS class!</button>
+    </div>
+  </div>
+  <div class="mt-4">
+    <h2>*ngFor</h2>
+    <div class="px-4">
+      <div>Rendering array: [{{numbers.join(", ")}}]</div>
+      <ul>
+        <li *ngFor="let number of numbers">{{number}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
