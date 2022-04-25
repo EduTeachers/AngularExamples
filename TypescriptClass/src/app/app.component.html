@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Pokemon Type</h1>
+  <div class="my-2">
+    <button (click)="ascendingOrder = true" class="btn me-1" [class.btn-outline-primary]="!ascendingOrder" [class.btn-primary]="ascendingOrder">Ascending</button>
+    <button (click)="ascendingOrder = false" class="btn" [class.btn-outline-primary]="ascendingOrder" [class.btn-primary]="!ascendingOrder">Descending</button>
+  </div>
+  <ul>
+    <li *ngFor="let item of type">{{item.english}}</li>
+  </ul>
+</div>
