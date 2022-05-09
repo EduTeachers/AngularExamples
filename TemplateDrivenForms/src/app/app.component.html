@@ -1,0 +1,41 @@
+<div class="container">
+  <h1>Template Driven Forms</h1>
+  <h3><code>&lt;input/&gt;</code></h3>
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input name="test" [(ngModel)]="username" type="text" class="form-control" id="username" placeholder="Enter username">
+    <small class="form-text text-muted">Username value: .'{{username}}'</small>
+  </div>
+  <div class="form-group mt-2">
+    <label for="number">Number</label>
+    <input name="test2" [(ngModel)]="number" type="number" class="form-control" id="number" placeholder="Enter a number">
+    <small class="form-text text-muted">1 + {{number}} = {{number + 1}}</small>
+  </div>
+  <div class="form-group mt-2">
+    <label for="number">Focus in/out</label>
+    <input (focusin)="focus = true" (focusout)="focus = false" class="form-control">
+    <small class="form-text text-muted">{{focus ? 'Focused in' : 'Focused out'}}</small>
+  </div>
+
+  <h3>Complex form (using a class)</h3>
+  <form (ngSubmit)="printUserInfo()">
+    <h4>Register</h4>
+    <div class="d-flex flex-row gap-2">
+      <div class="form-group flex-grow-1 w-50">
+        <label for="number">Full Name</label>
+        <input name="test3" class="form-control" type="text" [(ngModel)]="user.fullName">
+      </div>
+      <div class="form-group flex-grow-1 w-50">
+        <label for="number">Username</label>
+        <input name="test4" class="form-control" type="text" [(ngModel)]="user.username">
+      </div>
+    </div>
+    <div class="form-group mt-2">
+      <label for="number">Password</label>
+      <input name="test5" class="form-control" type="text" [(ngModel)]="user.password">
+    </div>
+    <div class="text-end mt-2">
+      <button class="btn btn-primary">Register</button>
+    </div>
+  </form>
+</div>
