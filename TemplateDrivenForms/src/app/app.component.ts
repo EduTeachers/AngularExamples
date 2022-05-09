@@ -12,6 +12,7 @@ export class AppComponent {
   number: number = 0;
   focus: boolean = false;
   user: User = new User();
+  option: any;
 
   printUserInfo() {
     console.log(this.user)
