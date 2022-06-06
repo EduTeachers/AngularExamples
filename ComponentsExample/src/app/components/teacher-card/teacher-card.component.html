@@ -1,0 +1,9 @@
+<div class="card h-100" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{teacher.fullName}}</h5>
+    <p class="card-text text-muted">{{teacher.email}}</p>
+    <div>
+      <div class="badge bg-info me-1" *ngFor="let subject of teacher.subjects">{{subject}}</div>
+    </div>
+  </div>
+</div>
